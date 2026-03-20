@@ -1,0 +1,369 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #ffffff;
+  --text-dark: #141414;
+  --red: #eb1818;
+  --red-hover: #c32020;
+  --container-max: 1280px;
+}
+
+@font-face {
+  font-family: 'NetworkFreeVersion';
+  src: url('fonts/NetworkFreeVersion.woff2') format('woff2'),
+       url('fonts/NetworkFreeVersion.woff') format('woff'),
+       url('fonts/NetworkFreeVersion.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Advent Pro', sans-serif;
+  min-height: 100vh;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  background-image: url(assets/bg-provisorio-wide.jpg);  
+    background-position-x: center;  
+    background-repeat: no-repeat;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#estrutura {
+  width: 100%;
+  max-width: var(--container-max);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#topo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 44px 0;
+}
+
+.logo {
+  width: 180px;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 54px;
+  line-height: 1;
+  font-weight: 800;
+  color: var(--white);
+}
+
+.siteconstrucao {
+  width: auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.redes-sociais {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding-bottom: 8px;
+}
+
+.redes-sociais a {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color .2s ease, transform .2s ease;
+}
+
+.redes-sociais a:hover {
+  color: var(--text-dark);
+  transform: translateY(-1px);
+}
+
+.redes-sociais i {
+  font-size: 22px;
+}
+
+.redes-titulo {
+  font-family: 'Advent Pro', sans-serif;
+  font-size: 24px;
+  line-height: 1.1;
+  font-weight: 800;
+  color: var(--white);
+}
+
+.arroba-redes {
+  margin-top: 2px;
+  font-size: 22px;
+  line-height: 1.1;
+  font-weight: 400;
+  color: var(--white);
+}
+
+#center {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.copy {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 50px;
+}
+
+.subheadline {
+  margin: 0;
+  font-family: 'NetworkFreeVersion', 'Advent Pro', sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: var(--red);
+}
+
+h2 {
+  width: 100%;
+  max-width: 640px;
+  margin: 0;
+  color: var(--text-dark);
+  font-family: 'Advent Pro', sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.bold {
+  font-weight: 800;
+  font-style: italic;
+}
+
+.cta {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 50px 0 0;
+}
+
+.btn-catalogo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  align-self: center;
+  margin-top: 20px;
+  padding: 20px 40px;
+  border-radius: 10px;
+  border: 0;
+  background: var(--text-dark);
+  color: var(--white);
+  font-family: 'Advent Pro', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  transition: background-color .2s ease, transform .2s ease;
+}
+
+.btn-catalogo:hover {
+  background: var(--red-hover);
+  transform: translateY(-1px);
+}
+
+#rodape {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  border-top: 1px solid;
+  border-image: linear-gradient(
+    to right,
+    rgba(235, 24, 24, 0),
+    rgba(235, 24, 24, 1),
+    rgba(235, 24, 24, 0)
+  ) 1;
+}
+
+#rodape p {
+  font-family: 'Advent Pro', sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--white);
+  text-align: center;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  body {
+    background-image: url('assets/bg-provisorio-wide.jpg');
+  }
+
+  #topo {
+    padding: 32px 0;
+  }
+
+  .logo {
+    width: 130px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .siteconstrucao {
+    width: 200px;
+  }
+
+  .redes-sociais i {
+    font-size: 18px;
+  }
+
+  .redes-titulo {
+    font-size: 22px;
+  }
+
+  .arroba-redes {
+    font-size: 18px;
+  }
+
+  #center {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .copy {
+    width: 100%;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .subheadline {
+    font-size: 26px;
+  }
+
+  h2 {
+    max-width: 406px;
+    font-size: 38px;
+    text-align: center;
+  }
+
+  .cta {
+    width: 100%;
+    justify-content: center;
+    padding: 30px 0 0;
+  }
+
+  .btn-catalogo {
+    width: 345px;
+    max-width: 100%;
+    margin-top: 0;
+  }
+
+  #rodape p {
+    font-size: 22px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  body {
+    background-image: url('assets/bg-provisorio-mobile.jpg');
+  }
+
+  #estrutura {
+    padding: 0 20px;
+  }
+
+  #topo {
+    padding: 20px 0;
+  }
+
+  .logo {
+    width: 110px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .siteconstrucao {
+    width: 200px;
+  }
+
+  .redes-sociais i {
+    font-size: 18px;
+  }
+
+  .redes-titulo {
+    font-size: 20px;
+  }
+
+  .arroba-redes {
+    font-size: 18px;
+  }
+
+  .copy {
+    width: 100%;
+    align-items: center;
+    padding: 0;
+    margin-top: 40px;
+  }
+
+  .subheadline {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  h2 {
+    width: 100%;
+    max-width: 350px;
+    font-size: 33px;
+    text-align: center;
+  }
+
+  .cta {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0 0;
+  }
+
+  .btn-catalogo {
+    width: 300px;
+    max-width: 100%;
+    margin-top: 0;
+  }
+
+  #rodape p {
+    font-size: 16px;
+  }
+}
