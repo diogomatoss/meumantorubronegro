@@ -217,7 +217,7 @@ h2 {
   font-family: 'Advent Pro', sans-serif;
   font-size: 22px;
   font-weight: 400;
-  color: var(--white);
+  color: var(--text-dark);
   text-align: center;
 }
 
@@ -321,7 +321,6 @@ h2 {
 
   .redes-sociais i {
     font-size: 18px;
-    gap: 5px;
   }
 
   .redes-titulo {
