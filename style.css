@@ -102,7 +102,6 @@ h1 {
 
 .redes-sociais a:hover {
   color: var(--text-dark);
-  transform: translateY(-1px);
 }
 
 .redes-sociais i {
